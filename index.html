@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beauty GENcheckup</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f5f6fa;
+    }
+    .box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.08);
+      text-align: center;
+    }
+    .tab-box {
+      border: solid 1px #a36c44;
+    }
+    .tab-box h6{
+      color: #a36c44;
+    }
+    header, footer {
+      background: #A36C45;
+      padding: 16px 0;      
+    }
+    .rk-mainBody, header, footer, .notice{
+      max-width: 992px;
+      margin: 0 auto;
+    }
+    aside {
+      background: #1f2937;
+      color: #fff;
+      min-height: 300px;
+      border-radius: 8px;
+    }
+    /* =========================================================
+    ROOT VARIABLES (Bootstrap 5 defaults)
+    ========================================================= */
+    :root {
+    --rk-gutter-x: 1.5rem;
+    --rk-gutter-y: 0;
+    --rk-space-0: 0;
+    --rk-space-1: 0.25rem;
+    --rk-space-2: 0.5rem;
+    --rk-space-3: 1rem;
+    --rk-space-4: 1.5rem;
+    --rk-space-5: 3rem;
+    }
+
+/* =========================================================
+   CONTAINERS
+========================================================= */
+.rk-container,
+.rk-container-fluid,
+.rk-container-sm,
+.rk-container-md,
+.rk-container-lg,
+.rk-container-xl,
+.rk-container-xxl {
+  /* width: 100%; */
+  padding-right: calc(var(--rk-gutter-x) * .5);
+  padding-left: calc(var(--rk-gutter-x) * .5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .rk-container,
+  .rk-container-sm { max-width: 540px; }
+}
+
+@media (min-width: 768px) {
+  .rk-container,
+  .rk-container-sm,
+  .rk-container-md { max-width: 720px; }
+}
+
+@media (min-width: 992px) {
+  .rk-container,
+  .rk-container-sm,
+  .rk-container-md,
+  .rk-container-lg { max-width: 960px; }
+}
+
+@media (min-width: 1200px) {
+  .rk-container,
+  .rk-container-sm,
+  .rk-container-md,
+  .rk-container-lg,
+  .rk-container-xl { max-width: 1140px; }
+}
+
+@media (min-width: 1400px) {
+  .rk-container,
+  .rk-container-sm,
+  .rk-container-md,
+  .rk-container-lg,
+  .rk-container-xl,
+  .rk-container-xxl { max-width: 1320px; }
+}
+
+/* =========================================================
+   ROW
+========================================================= */
+.rk-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--rk-gutter-y));
+  margin-right: calc(-.5 * var(--rk-gutter-x));
+  margin-left: calc(-.5 * var(--rk-gutter-x));
+}
+
+.rk-row > * {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--rk-gutter-x) * .5);
+  padding-left: calc(var(--rk-gutter-x) * .5);
+  margin-top: var(--rk-gutter-y);
+}
+
+/* =========================================================
+   COLUMNS
+========================================================= */
+.rk-col {
+  flex: 1 0 0%;
+}
+
+.rk-col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+/* Fixed Columns 1–12 */
+.rk-col-1 { width: 8.333333%; }
+.rk-col-2 { width: 16.666667%; }
+.rk-col-3 { width: 25%; }
+.rk-col-4 { width: 33.333333%; }
+.rk-col-5 { width: 41.666667%; }
+.rk-col-6 { width: 50%; }
+.rk-col-7 { width: 58.333333%; }
+.rk-col-8 { width: 66.666667%; }
+.rk-col-9 { width: 75%; }
+.rk-col-10 { width: 83.333333%; }
+.rk-col-11 { width: 91.666667%; }
+.rk-col-12 { width: 100%; }
+
+/* =========================================================
+   RESPONSIVE COLUMNS
+========================================================= */
+@media (min-width: 576px) {
+  .rk-col-sm { flex: 1 0 0%; }
+  .rk-col-sm-auto { width: auto; }
+  .rk-col-sm-6 { width: 50%; }
+}
+
+@media (min-width: 768px) {
+  .rk-col-md { flex: 1 0 0%; }
+  .rk-col-md-auto { width: auto; }
+  .rk-col-md-6 { width: 50%; }
+}
+
+@media (min-width: 992px) {
+  .rk-col-lg { flex: 1 0 0%; }
+  .rk-col-lg-auto { width: auto; }
+  .rk-col-lg-4 { width: 33.333333%; }
+}
+
+@media (min-width: 1200px) {
+  .rk-col-xl { flex: 1 0 0%; }
+}
+
+@media (min-width: 1400px) {
+  .rk-col-xxl { flex: 1 0 0%; }
+}
+
+@media (min-width: 576px) {
+
+  .rk-col-sm { flex: 1 0 0%; }
+
+  .rk-col-sm-auto {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .rk-col-sm-1 { width: 8.333333%; }
+  .rk-col-sm-2 { width: 16.666667%; }
+  .rk-col-sm-3 { width: 25%; }
+  .rk-col-sm-4 { width: 33.333333%; }
+  .rk-col-sm-5 { width: 41.666667%; }
+  .rk-col-sm-6 { width: 50%; }
+  .rk-col-sm-7 { width: 58.333333%; }
+  .rk-col-sm-8 { width: 66.666667%; }
+  .rk-col-sm-9 { width: 75%; }
+  .rk-col-sm-10 { width: 83.333333%; }
+  .rk-col-sm-11 { width: 91.666667%; }
+  .rk-col-sm-12 { width: 100%; }
+
+}
+@media (min-width: 768px) {
+
+  .rk-col-md { flex: 1 0 0%; }
+
+  .rk-col-md-auto {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .rk-col-md-1 { width: 8.333333%; }
+  .rk-col-md-2 { width: 16.666667%; }
+  .rk-col-md-3 { width: 25%; }
+  .rk-col-md-4 { width: 33.333333%; }
+  .rk-col-md-5 { width: 41.666667%; }
+  .rk-col-md-6 { width: 50%; }
+  .rk-col-md-7 { width: 58.333333%; }
+  .rk-col-md-8 { width: 66.666667%; }
+  .rk-col-md-9 { width: 75%; }
+  .rk-col-md-10 { width: 83.333333%; }
+  .rk-col-md-11 { width: 91.666667%; }
+  .rk-col-md-12 { width: 100%; }
+
+}
+@media (min-width: 992px) {
+
+  .rk-col-lg { flex: 1 0 0%; }
+
+  .rk-col-lg-auto {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .rk-col-lg-1 { width: 8.333333%; }
+  .rk-col-lg-2 { width: 16.666667%; }
+  .rk-col-lg-3 { width: 25%; }
+  .rk-col-lg-4 { width: 33.333333%; }
+  .rk-col-lg-5 { width: 41.666667%; }
+  .rk-col-lg-6 { width: 50%; }
+  .rk-col-lg-7 { width: 58.333333%; }
+  .rk-col-lg-8 { width: 66.666667%; }
+  .rk-col-lg-9 { width: 75%; }
+  .rk-col-lg-10 { width: 83.333333%; }
+  .rk-col-lg-11 { width: 91.666667%; }
+  .rk-col-lg-12 { width: 100%; }
+
+}
+@media (min-width: 1200px) {
+
+  .rk-col-xl { flex: 1 0 0%; }
+
+  .rk-col-xl-auto {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .rk-col-xl-1 { width: 8.333333%; }
+  .rk-col-xl-2 { width: 16.666667%; }
+  .rk-col-xl-3 { width: 25%; }
+  .rk-col-xl-4 { width: 33.333333%; }
+  .rk-col-xl-5 { width: 41.666667%; }
+  .rk-col-xl-6 { width: 50%; }
+  .rk-col-xl-7 { width:  58.333333%; }
+  .rk-col-xl-8 { width: 66.666667%; }
+  .rk-col-xl-9 { width: 75%; }
+  .rk-col-xl-10 { width: 83.333333%; }
+  .rk-col-xl-11 { width: 91.666667%; }
+  .rk-col-xl-12 { width: 100%; }
+
+}
+@media (min-width: 1400px) {
+
+  .rk-col-xxl { flex: 1 0 0%; }
+
+  .rk-col-xxl-auto {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .rk-col-xxl-1 { width: 8.333333%; }
+  .rk-col-xxl-2 { width: 16.666667%; }
+  .rk-col-xxl-3 { width: 25%; }
+  .rk-col-xxl-4 { width: 33.333333%; }
+  .rk-col-xxl-5 { width: 41.666667%; }
+  .rk-col-xxl-6 { width: 50%; }
+  .rk-col-xxl-7 { width: 58.333333%; }
+  .rk-col-xxl-8 { width: 66.666667%; }
+  .rk-col-xxl-9 { width: 75%; }
+  .rk-col-xxl-10 { width: 83.333333%; }
+  .rk-col-xxl-11 { width: 91.666667%; }
+  .rk-col-xxl-12 { width: 100%; }
+
+}
+
+
+/* =========================================================
+   ROW COLUMNS
+========================================================= */
+.rk-row-cols-1 > * { width: 100%; }
+.rk-row-cols-2 > * { width: 50%; }
+.rk-row-cols-3 > * { width: 33.333333%; }
+.rk-row-cols-4 > * { width: 25%; }
+.rk-row-cols-5 > * { width: 20%; }
+.rk-row-cols-6 > * { width: 16.666667%; }
+
+/* =========================================================
+   OFFSETS
+========================================================= */
+.rk-offset-1 { margin-left: 8.333333%; }
+.rk-offset-2 { margin-left: 16.666667%; }
+.rk-offset-3 { margin-left: 25%; }
+.rk-offset-4 { margin-left: 33.333333%; }
+.rk-offset-5 { margin-left: 41.666667%; }
+.rk-offset-6 { margin-left: 50%; }
+
+/* =========================================================
+   GUTTERS
+========================================================= */
+.rk-g-0 { --rk-gutter-x: 0; --rk-gutter-y: 0; }
+.rk-g-1 { --rk-gutter-x: .25rem; --rk-gutter-y: .25rem; }
+.rk-g-2 { --rk-gutter-x: .5rem;  --rk-gutter-y: .5rem; }
+.rk-g-3 { --rk-gutter-x: 1rem;   --rk-gutter-y: 1rem; }
+.rk-g-4 { --rk-gutter-x: 1.5rem; --rk-gutter-y: 1.5rem; }
+.rk-g-5 { --rk-gutter-x: 3rem;   --rk-gutter-y: 3rem; }
+
+.rk-gx-0 { --rk-gutter-x: 0; }
+.rk-gx-3 { --rk-gutter-x: 1rem; }
+
+.rk-gy-0 { --rk-gutter-y: 0; }
+.rk-gy-3 { --rk-gutter-y: 1rem; }
+
+/* =========================================================
+   RK DISPLAY UTILITIES (Bootstrap-5 Responsive)
+========================================================= */
+
+/* Base (All screen sizes) */
+.rk-d-none  { display: none !important; }
+.rk-d-block { display: block !important; }
+.rk-d-flex  { display: flex !important; }
+.rk-d-grid  { display: grid !important; }
+
+
+/* =========================================================
+   SMALL (≥576px)
+========================================================= */
+@media (min-width: 576px) {
+  .rk-d-sm-none  { display: none !important; }
+  .rk-d-sm-block { display: block !important; }
+  .rk-d-sm-flex  { display: flex !important; }
+  .rk-d-sm-grid  { display: grid !important; }
+}
+
+
+/* =========================================================
+   MEDIUM (≥768px)
+========================================================= */
+@media (min-width: 768px) {
+  .rk-d-md-none  { display: none !important; }
+  .rk-d-md-block { display: block !important; }
+  .rk-d-md-flex  { display: flex !important; }
+  .rk-d-md-grid  { display: grid !important; }
+}
+
+
+/* =========================================================
+   LARGE (≥992px)
+========================================================= */
+@media (min-width: 992px) {
+  .rk-d-lg-none  { display: none !important; }
+  .rk-d-lg-block { display: block !important; }
+  .rk-d-lg-flex  { display: flex !important; }
+  .rk-d-lg-grid  { display: grid !important; }
+}
+
+
+/* =========================================================
+   EXTRA LARGE (≥1200px)
+========================================================= */
+@media (min-width: 1200px) {
+  .rk-d-xl-none  { display: none !important; }
+  .rk-d-xl-block { display: block !important; }
+  .rk-d-xl-flex  { display: flex !important; }
+  .rk-d-xl-grid  { display: grid !important; }
+}
+
+
+/* =========================================================
+   EXTRA EXTRA LARGE (≥1400px)
+========================================================= */
+@media (min-width: 1400px) {
+  .rk-d-xxl-none  { display: none !important; }
+  .rk-d-xxl-block { display: block !important; }
+  .rk-d-xxl-flex  { display: flex !important; }
+  .rk-d-xxl-grid  { display: grid !important; }
+}
+ 
+
+/* =========================================================
+   FLEX UTILITIES
+========================================================= */
+.rk-flex-row { flex-direction: row; }
+.rk-flex-column { flex-direction: column; }
+.rk-flex-wrap { flex-wrap: wrap; }
+.rk-flex-nowrap { flex-wrap: nowrap; }
+
+.rk-justify-content-start { justify-content: flex-start; }
+.rk-justify-content-center { justify-content: center; }
+.rk-justify-content-end { justify-content: flex-end; }
+.rk-justify-content-between { justify-content: space-between; }
+
+.rk-align-items-start { align-items: flex-start; }
+.rk-align-items-center { align-items: center; }
+.rk-align-items-end { align-items: flex-end; }
+
+/* =========================================================
+   ROOT TYPOGRAPHY VARIABLES
+========================================================= */
+:root {
+   --rk-body-font-size: 1rem;
+  --rk-body-line-height: 1.5;
+  --rk-body-color: #212529;
+
+  --rk-heading-color: #111827;
+  --rk-muted-color: #6b7280;
+}
+
+/* =========================================================
+   BASE TEXT
+========================================================= */
+body {
+  font-family: var(--rk-font-sans);
+  font-size: var(--rk-body-font-size);
+  line-height: var(--rk-body-line-height);
+  color: var(--rk-body-color);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--rk-heading-color);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+/* =========================================================
+   RESPONSIVE HEADINGS
+========================================================= */
+@media (max-width: 575.98px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+}
+
+/* =========================================================
+   RK FONT SIZE UTILITIES (Bootstrap-like)
+========================================================= */
+
+/* Base scale (similar to Bootstrap 5) */
+.rk-fs-1 { font-size: 2.5rem !important; }   /* Biggest */
+.rk-fs-2 { font-size: 2rem !important; }
+.rk-fs-3 { font-size: 1.75rem !important; }
+.rk-fs-4 { font-size: 1.5rem !important; }
+.rk-fs-5 { font-size: 1.25rem !important; }
+.rk-fs-6 { font-size: 1rem !important; }    /* Normal */
+
+/* Extra small text */
+.rk-fs-sm { font-size: 0.875rem !important; }
+
+/* Extra large text */
+.rk-fs-lg { font-size: 3rem !important; }
+
+/* =========================================================
+   RESPONSIVE FONT SIZE HELPERS
+========================================================= */
+@media (max-width: 575.98px) {
+  .rk-fs-1 { font-size: 2rem !important; }
+  .rk-fs-2 { font-size: 1.75rem !important; }
+  .rk-fs-3 { font-size: 1.5rem !important; }
+}
+
+/* =========================================================
+   LINE HEIGHT UTILITIES
+========================================================= */
+.rk-lh-1   { line-height: 1 !important; }
+.rk-lh-sm  { line-height: 1.25 !important; }
+.rk-lh-base{ line-height: 1.5 !important; }
+.rk-lh-lg  { line-height: 2 !important; }
+
+/* =========================================================
+   TEXT SIZE SHORTCUTS
+========================================================= */
+.rk-text-small   { font-size: 0.85rem !important; }
+.rk-text-normal  { font-size: 1rem !important; }
+.rk-text-large   { font-size: 1.25rem !important; }
+.rk-text-xlarge  { font-size: 1.5rem !important; }
+.rk-text-xxlarge { font-size: 2rem !important; }
+
+
+/* =========================================================
+   DISPLAY TEXT
+========================================================= */
+.rk-display-1 { font-size: 5rem; font-weight: 700; line-height: 1.1; }
+.rk-display-2 { font-size: 4.5rem; font-weight: 700; line-height: 1.1; }
+.rk-display-3 { font-size: 4rem; font-weight: 700; line-height: 1.1; }
+.rk-display-4 { font-size: 3.5rem; font-weight: 700; line-height: 1.1; }
+.rk-display-5 { font-size: 3rem; font-weight: 700; line-height: 1.1; }
+.rk-display-6 { font-size: 2.5rem; font-weight: 700; line-height: 1.1; }
+
+/* =========================================================
+   LEAD TEXT
+========================================================= */
+.rk-lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+/* =========================================================
+   INLINE TEXT UTILITIES
+========================================================= */
+.rk-text-muted { color: var(--rk-muted-color); }
+.rk-text-primary { color: #2563eb; }
+.rk-text-success { color: #16a34a; }
+.rk-text-danger { color: #ff0404; }
+.rk-text-warning { color: #ca8a04; }
+.rk-text-info { color: #0ea5e9; }
+.rk-text-light { color: #f3f4f6; }
+.rk-text-dark { color: #111827; }
+
+.rk-text-start { text-align: left; }
+.rk-text-center { text-align: center; }
+.rk-text-end { text-align: right; }
+
+.rk-text-uppercase { text-transform: uppercase; }
+.rk-text-lowercase { text-transform: lowercase; }
+.rk-text-capitalize { text-transform: capitalize; }
+
+/* =========================================================
+   FONT WEIGHT & STYLE
+========================================================= */
+.rk-fw-light { font-weight: 300; }
+.rk-fw-normal { font-weight: 400; }
+.rk-fw-medium { font-weight: 500; }
+.rk-fw-semibold { font-weight: 600; }
+.rk-fw-bold { font-weight: 700; }
+
+.rk-fst-italic { font-style: italic; }
+.rk-fst-normal { font-style: normal; }
+
+/* =========================================================
+   LINKS
+========================================================= */
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   LISTS
+========================================================= */
+ul, ol {
+  padding-left: 2rem;
+}
+
+.rk-list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.rk-list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.rk-list-inline > li {
+  display: inline-block;
+  margin-right: .5rem;
+}
+
+/* =========================================================
+   BLOCKQUOTE
+========================================================= */
+blockquote {
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+  border-left: 4px solid #e5e7eb;
+  color: #374151;
+}
+
+/* =========================================================
+   CODE
+========================================================= */
+code {
+  font-family: var(--rk-font-mono);
+  font-size: .875em;
+  background: #f3f4f6;
+  padding: .2em .4em;
+  border-radius: 4px;
+}
+
+pre {
+  font-family: var(--rk-font-mono);
+  font-size: .875rem;
+  background: #111827;
+  color: #e5e7eb;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+/* =========================================================
+   SMALL & MARK
+========================================================= */
+small, .rk-small {
+  font-size: .875em;
+}
+
+mark {
+  background: #fde68a;
+  padding: .2em;
+}
+ 
+/* =========================================================
+   RK CSS-ONLY TABS
+========================================================= */
+
+/* Hide radio buttons */
+.rk-tabs input[type="radio"] {
+  display: none;
+}
+
+/* Tabs container */
+.rk-tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 1rem;
+}
+
+/* Tab labels */
+.rk-tab-label {
+  padding: .75rem 1.25rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: #6b7280;
+  border-bottom: 3px solid transparent;
+  transition: color .2s ease, border-color .2s ease;
+}
+
+.rk-tab-label:hover {
+  color: #111827;
+}
+
+/* Active tab */
+.rk-tabs input:checked + .rk-tab-label {
+  color: #2563eb;
+  border-color: #2563eb;
+}
+
+/* Tab panels */
+.rk-tab-panel {
+  display: none;
+  padding-top: 1rem;
+}
+
+/* Show active panel */
+#rk-tab-1:checked ~ .rk-content #rk-panel-1,
+#rk-tab-2:checked ~ .rk-content #rk-panel-2,
+#rk-tab-3:checked ~ .rk-content #rk-panel-3 {
+  display: block;
+}
+
+/* Mobile friendly */
+@media (max-width: 575.98px) {
+  .rk-tab-label {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+/* =========================================================
+   RK VERTICAL TABS (CSS ONLY)
+========================================================= */
+
+
+/* Hide radios */
+.rk-vtabs input {
+  display: none;
+}
+
+/* LEFT TAB LIST */
+.rk-vtabs-nav {
+  background: #fafafa;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:space-between;
+}
+
+.rk-vtab-label {
+  display: block;
+  padding: 16px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #111827;
+  border-top: 2px solid transparent;
+  transition: background .2s ease, border-color .2s ease;
+}
+
+.rk-vtab-label:hover {
+  background: #f3f4f6;
+}
+
+/* ACTIVE TAB */
+ /* ACTIVE TAB LABEL (FIXED) */
+#rk-vtab-1:checked ~ .rk-vtabs-nav label[for="rk-vtab-1"],
+#rk-vtab-2:checked ~ .rk-vtabs-nav label[for="rk-vtab-2"],
+#rk-vtab-3:checked ~ .rk-vtabs-nav label[for="rk-vtab-3"],
+#rk-vtab-4:checked ~ .rk-vtabs-nav label[for="rk-vtab-4"],
+#rk-vtab-5:checked ~ .rk-vtabs-nav label[for="rk-vtab-5"],
+#rk-vtab-6:checked ~ .rk-vtabs-nav label[for="rk-vtab-6"] {
+  background: #fff;
+  border-top-color: #a36c44;
+  color: #a36c44;
+  font-weight: 600;
+}
+
+
+/* RIGHT CONTENT */
+.rk-vtabs-content {
+  flex: 1;
+  padding: 24px;
+}
+
+/* PANELS */
+.rk-vtab-panel {
+  display: none;
+}
+
+/* SHOW ACTIVE PANEL */
+#rk-vtab-1:checked ~ .rk-vtabs-content #rk-vpanel-1,
+#rk-vtab-2:checked ~ .rk-vtabs-content #rk-vpanel-2,
+#rk-vtab-3:checked ~ .rk-vtabs-content #rk-vpanel-3,
+#rk-vtab-4:checked ~ .rk-vtabs-content #rk-vpanel-4,
+#rk-vtab-5:checked ~ .rk-vtabs-content #rk-vpanel-5,
+#rk-vtab-6:checked ~ .rk-vtabs-content #rk-vpanel-6 {
+  display: block;
+}
+
+/* =========================================================
+   RESPONSIVE (MOBILE)
+========================================================= */
+@media (max-width: 767px) {
+  .rk-vtabs {
+    flex-direction: column;
+  }
+
+  .rk-vtabs-nav {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .rk-vtab-label {
+    border-left: none;
+    border-bottom: 2px solid transparent;
+  }
+  .rk-logo-pic{
+    margin: 0 auto;
+  }
+}
+
+/* =========================================================
+   RK RESPONSIVE IMAGES
+========================================================= */
+
+/* Base responsive image */
+.rk-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Inline image (doesn't break text flow) */
+.rk-img-inline {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+/* Fluid image (fills parent width) */
+.rk-img-fluid {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Rounded corners */
+.rk-img-rounded {
+  border-radius: 8px;
+}
+
+.rk-img-circle {
+  border-radius: 50%;
+}
+
+/* Image with border */
+.rk-img-border {
+  border: 1px solid #e5e7eb;
+  padding: 4px;
+  background: #fff;
+}
+
+/* Center image */
+.rk-img-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Shadow */
+.rk-img-shadow {
+  box-shadow: 0 4px 12px rgba(0,0,0,.12);
+}
+
+/* =========================================================
+   OBJECT FIT UTILITIES
+========================================================= */
+.rk-img-cover {
+  object-fit: cover;
+}
+
+.rk-img-contain {
+  object-fit: contain;
+}
+
+.rk-img-fill {
+  object-fit: fill;
+}
+
+/* Required when using object-fit */
+.rk-img-fixed {
+  width: 100%;
+  height: 100%;
+}
+
+
+.rk-img-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================================================
+   WORDPRESS FRIENDLY
+========================================================= */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   RK SPACING UTILITIES (Margin + Padding)
+   Scale: 0–5 (Bootstrap 5 standard)
+========================================================= */
+
+
+/* =========================================================
+   MARGIN (All Sides)
+========================================================= */
+.rk-m-0 { margin: var(--rk-space-0) !important; }
+.rk-m-1 { margin: var(--rk-space-1) !important; }
+.rk-m-2 { margin: var(--rk-space-2) !important; }
+.rk-m-3 { margin: var(--rk-space-3) !important; }
+.rk-m-4 { margin: var(--rk-space-4) !important; }
+.rk-m-5 { margin: var(--rk-space-5) !important; }
+
+.rk-m-auto { margin: auto !important; }
+
+/* =========================================================
+   MARGIN TOP / BOTTOM / LEFT / RIGHT
+========================================================= */
+.rk-mt-0 { margin-top: var(--rk-space-0) !important; }
+.rk-mt-1 { margin-top: var(--rk-space-1) !important; }
+.rk-mt-2 { margin-top: var(--rk-space-2) !important; }
+.rk-mt-3 { margin-top: var(--rk-space-3) !important; }
+.rk-mt-4 { margin-top: var(--rk-space-4) !important; }
+.rk-mt-5 { margin-top: var(--rk-space-5) !important; }
+
+.rk-mb-0 { margin-bottom: var(--rk-space-0) !important; }
+.rk-mb-1 { margin-bottom: var(--rk-space-1) !important; }
+.rk-mb-2 { margin-bottom: var(--rk-space-2) !important; }
+.rk-mb-3 { margin-bottom: var(--rk-space-3) !important; }
+.rk-mb-4 { margin-bottom: var(--rk-space-4) !important; }
+.rk-mb-5 { margin-bottom: var(--rk-space-5) !important; }
+
+.rk-ms-0 { margin-left: var(--rk-space-0) !important; }
+.rk-ms-1 { margin-left: var(--rk-space-1) !important; }
+.rk-ms-2 { margin-left: var(--rk-space-2) !important; }
+.rk-ms-3 { margin-left: var(--rk-space-3) !important; }
+.rk-ms-4 { margin-left: var(--rk-space-4) !important; }
+.rk-ms-5 { margin-left: var(--rk-space-5) !important; }
+
+.rk-me-0 { margin-right: var(--rk-space-0) !important; }
+.rk-me-1 { margin-right: var(--rk-space-1) !important; }
+.rk-me-2 { margin-right: var(--rk-space-2) !important; }
+.rk-me-3 { margin-right: var(--rk-space-3) !important; }
+.rk-me-4 { margin-right: var(--rk-space-4) !important; }
+.rk-me-5 { margin-right: var(--rk-space-5) !important; }
+
+/* =========================================================
+   MARGIN X / Y AXIS
+========================================================= */
+.rk-mx-0 { margin-left: var(--rk-space-0) !important; margin-right: var(--rk-space-0) !important; }
+.rk-mx-1 { margin-left: var(--rk-space-1) !important; margin-right: var(--rk-space-1) !important; }
+.rk-mx-2 { margin-left: var(--rk-space-2) !important; margin-right: var(--rk-space-2) !important; }
+.rk-mx-3 { margin-left: var(--rk-space-3) !important; margin-right: var(--rk-space-3) !important; }
+.rk-mx-4 { margin-left: var(--rk-space-4) !important; margin-right: var(--rk-space-4) !important; }
+.rk-mx-5 { margin-left: var(--rk-space-5) !important; margin-right: var(--rk-space-5) !important; }
+
+.rk-my-0 { margin-top: var(--rk-space-0) !important; margin-bottom: var(--rk-space-0) !important; }
+.rk-my-1 { margin-top: var(--rk-space-1) !important; margin-bottom: var(--rk-space-1) !important; }
+.rk-my-2 { margin-top: var(--rk-space-2) !important; margin-bottom: var(--rk-space-2) !important; }
+.rk-my-3 { margin-top: var(--rk-space-3) !important; margin-bottom: var(--rk-space-3) !important; }
+.rk-my-4 { margin-top: var(--rk-space-4) !important; margin-bottom: var(--rk-space-4) !important; }
+.rk-my-5 { margin-top: var(--rk-space-5) !important; margin-bottom: var(--rk-space-5) !important; }
+
+/* =========================================================
+   PADDING (All Sides)
+========================================================= */
+.rk-p-0 { padding: var(--rk-space-0) !important; }
+.rk-p-1 { padding: var(--rk-space-1) !important; }
+.rk-p-2 { padding: var(--rk-space-2) !important; }
+.rk-p-3 { padding: var(--rk-space-3) !important; }
+.rk-p-4 { padding: var(--rk-space-4) !important; }
+.rk-p-5 { padding: var(--rk-space-5) !important; }
+
+/* Padding Top */
+.rk-pt-0 { padding-top: var(--rk-space-0) !important; }
+.rk-pt-1 { padding-top: var(--rk-space-1) !important; }
+.rk-pt-2 { padding-top: var(--rk-space-2) !important; }
+.rk-pt-3 { padding-top: var(--rk-space-3) !important; }
+.rk-pt-4 { padding-top: var(--rk-space-4) !important; }
+.rk-pt-5 { padding-top: var(--rk-space-5) !important; }
+
+/* Padding Bottom */
+.rk-pb-0 { padding-bottom: var(--rk-space-0) !important; }
+.rk-pb-1 { padding-bottom: var(--rk-space-1) !important; }
+.rk-pb-2 { padding-bottom: var(--rk-space-2) !important; }
+.rk-pb-3 { padding-bottom: var(--rk-space-3) !important; }
+.rk-pb-4 { padding-bottom: var(--rk-space-4) !important; }
+.rk-pb-5 { padding-bottom: var(--rk-space-5) !important; }
+
+/* Padding Start/End */
+.rk-ps-0 { padding-left: var(--rk-space-0) !important; }
+.rk-ps-1 { padding-left: var(--rk-space-1) !important; }
+.rk-ps-2 { padding-left: var(--rk-space-2) !important; }
+.rk-ps-3 { padding-left: var(--rk-space-3) !important; }
+.rk-ps-4 { padding-left: var(--rk-space-4) !important; }
+.rk-ps-5 { padding-left: var(--rk-space-5) !important; }
+
+.rk-pe-0 { padding-right: var(--rk-space-0) !important; }
+.rk-pe-1 { padding-right: var(--rk-space-1) !important; }
+.rk-pe-2 { padding-right: var(--rk-space-2) !important; }
+.rk-pe-3 { padding-right: var(--rk-space-3) !important; }
+.rk-pe-4 { padding-right: var(--rk-space-4) !important; }
+.rk-pe-5 { padding-right: var(--rk-space-5) !important; }
+
+/* Padding X/Y */
+.rk-px-3 {
+  padding-left: var(--rk-space-3) !important;
+  padding-right: var(--rk-space-3) !important;
+}
+
+.rk-py-3 {
+  padding-top: var(--rk-space-3) !important;
+  padding-bottom: var(--rk-space-3) !important;
+}
+
+
+.rk-w-25{
+    width: 25%;
+}
+.rk-w-50 {
+    width: 50%;
+}
+.rk-w-75 {
+    width: 75%;
+}
+.rk-w-45 {
+    width: 45%;
+}
+.rk-w-35 {
+    width: 35%;
+}
+.rk-w-5 {
+    width: 5%;
+}
+.rk-w-15 {
+    width: 15%;
+}
+.rk-w-20 {
+    width: 20%;
+}
+.rk-bg-white{
+    background-color: #fff;
+}
+.rk-bg-danger{
+    background-color: #ff6b6b;
+}
+.rk-bg-primary{
+    background-color: #2563eb;
+}
+.footer-ceo-img{
+  filter: drop-shadow(7px 3px 12px black);
+}
+
+
+.comment-cloud {
+  color: #fff;
+  display: inline-block;
+}
+.comment-cloud:hover {
+  background: border-box linear-gradient(-45deg, #ffcaaa, #fff9f5);
+}
+.comment-cloud {
+  --s: 1em; /* triangle size */
+  --r: 1em; /* the radius */
+  padding: 0.5em;
+  border: var(--s) solid #0000;
+  border-radius: calc(var(--r) + var(--s));
+  border-top: 0;
+  border-bottom-left-radius: 0;
+  background: border-box linear-gradient(-45deg, #ffe0cd, #ffffff); /* the coloration */
+  -webkit-mask:
+    radial-gradient(100% 100% at 0 0,#0000 90%,#000 103%) 
+      0 calc(100% - var(--s))/var(--s) var(--s) no-repeat border-box,
+    linear-gradient(#000 0 0) padding-box
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  
+    <header class="rk-mb-4">
+      <div class="rk-container">
+      <div class="rk-row rk-align-items-center">
+        <div class="rk-col-12">
+            <div class="rk-logo rk-text-center rk-d-md-flex rk-justify-content-between rk-align-items-center">
+                <img src="https://beauty-gencheckup.com/wp-content/uploads/2025/11/PNG-Beauty_GenCheckUp-1.png" class="rk-img rk-logo-pic rk-w-15" style="max-width: 70px;" alt="beauty-gencheckup">
+                <p class="rk-text-light rk-my-1 rk-fw-light rk-fs-5 header-tagline">Beautiful skin begins where skincare ends  in your DNA</p>
+            </div>
+        </div>
+        </div>
+      </div>
+  
+  </header>
+
+  <!-- MAIN CONTENT -->
+  
+
+  <div class="rk-mainBody rk-bg-white rk-mb-4">
+    <div class="rk-container rk-g-0">
+      <div class="rk-row">
+        <div class="rk-col-12">
+
+          <div class="rk-vtabs">
+
+            <!-- RADIO INPUTS (must be siblings of content) -->
+            <input type="radio" name="rk-vtabs" id="rk-vtab-1" checked>
+            <input type="radio" name="rk-vtabs" id="rk-vtab-2">
+            <input type="radio" name="rk-vtabs" id="rk-vtab-3">
+            <input type="radio" name="rk-vtabs" id="rk-vtab-4"> 
+            <input type="radio" name="rk-vtabs" id="rk-vtab-5">
+
+            <!-- LEFT TABS -->
+            <div class="rk-vtabs-nav">
+                <label class="rk-vtab-label" for="rk-vtab-1">Beauty GENcheckup</label>
+                <label class="rk-vtab-label" for="rk-vtab-2">What this test reveals</label>
+                <label class="rk-vtab-label" for="rk-vtab-3">What is analyzed?</label>
+                <label class="rk-vtab-label" for="rk-vtab-4">What you receive?</label>
+                <label class="rk-vtab-label" for="rk-vtab-5">Who it’s for?</label>
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="rk-vtabs-content">
+
+                <div class="rk-vtab-panel" id="rk-vpanel-1">
+                <p>
+                    This GENcheckup shows how your genetics influence the way your skin ages, regenerates, and reacts  helping you choose skincare and routines that truly fit YOU.
+                </p>
+                </div>
+                <div class="rk-vtab-panel" id="rk-vpanel-2">
+                  <p>DNA-based insights for firmer, calmer, more resilient skin.</p>
+                  <p>Your skin is unique - your skincare should be too.</p>
+                  <p>This test shows how your genetics influence aging, sensitivity, moisture balance & regeneration.</p>
+                  <p>No diagnoses  just clear orientation for smarter skincare and “beauty from within.”</p>
+                </div>
+                <div class="rk-vtab-panel" id="rk-vpanel-3">
+                    
+                    <div class="rk-container rk-gx-0">
+                        <div class="rk-row rk-g-4 rk-justify-content-between">
+                            <div class="rk-col-md-6 rk-col-lg-4 rk-col-sm-6 rk-col-12">
+                                <div class="box tab-box">
+                                    <img src="img/Skin Structure & Collagen.png" class="rk-img rk-w-25 rk-mb-2 rk-m-auto" alt="">
+                                    <h6>Skin Structure & Collagen</h6>
+                                    <p>How your genes influence firmness, elasticity, and aging.</p>
+                                </div>
+                            </div>
+                            <div class="rk-col-md-6 rk-col-lg-4 rk-col-sm-6 rk-col-12">
+                                <div class="box tab-box">
+                                    <img src="img/Antioxidant & Environmental Stress.png" class="rk-img rk-w-25 rk-mb-2 rk-m-auto" alt="">
+                                    <h6>Antioxidant & Environmental Stress</h6>
+                                    <p>Your skin’s ability to handle oxidative stress, UV & pollution.</p>
+                                </div>
+                            </div>
+                            <div class="rk-col-md-6 rk-col-lg-4 rk-col-sm-6 rk-col-12">
+                                <div class="box tab-box">
+                                    <img src="img/Inflammation & Sensitivity.png" class="rk-img rk-w-25 rk-mb-2 rk-m-auto" alt="">
+                                    <h6>Inflammation & Sensitivity</h6>
+                                    <p>Tendencies for redness, irritation, and reactive skin.</p>
+                                </div>
+                            </div>
+                            <div class="rk-col-md-6 rk-col-lg-4 rk-col-sm-6 rk-col-12">
+                                <div class="box tab-box">
+                                    <img src="img/Moisture Balance & Barrier.png" class="rk-img rk-w-25 rk-mb-2 rk-m-auto" alt="">
+                                    <h6>Moisture Balance & Barrier</h6>
+                                    <p>Hydration capacity and skin barrier strength.</p>
+                                </div>
+                            </div>
+                            <div class="rk-col-md-6 rk-col-lg-4 rk-col-sm-6 rk-col-12">
+                                <div class="box tab-box">
+                                    <img src="img/regeneration & repair.png" class="rk-img rk-w-25 rk-mb-2 rk-m-auto" alt="">
+                                    <h6>Regeneration & Repair</h6>
+                                    <p>How quickly your skin renews & recovers at night.</p>
+                                </div>
+                            </div>
+                            <div class="rk-col-md-6 rk-col-lg-4 rk-col-sm-6 rk-col-12">
+                                <div class="box tab-box">
+                                    <img src="img/micro nutrition needs.png" class="rk-img rk-w-25 rk-mb-2 rk-m-auto" alt="">
+                                    <h6>Micronutrient Needs</h6>
+                                    <p>Genetic need for vitamins, minerals & antioxidants that support glowing skin.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rk-vtab-panel" id="rk-vpanel-4">
+                <p>When you choose the Beauty GENcheckup, you receive more than a test result. You receive a guided, expert-led system: Visually guided sample instructions Simple, clear, and easy to follow</p>
+
+                <p>1. A comprehensive, well-structured results book.
+                    Clearly explained and designed for real understanding</p>
+
+                <p>2. An expert-recommended DNA profile Structured for practical application — not raw data</p>
+
+                <p>3.  Interpretation guided by over 30 years of professional experience Developed and supervised by Carole Holzheuer, German pharmacist and expert in preventive and personalized health</p>
+                </div>
+                <div class="rk-vtab-panel" id="rk-vpanel-5">
+                <ul>
+                <li>Anyone who wants to understand their skin better <br></li>
+                <li>People looking for personalized skincare instead of trial and error<br></li>
+                <li>Those interested in “beauty from within”<br></li>
+                <li>Professionals in beauty, skincare, and wellness
+
+                </ul>    
+                </div>
+                <div class="rk-vtab-panel" id="rk-vpanel-6">
+                <p>This test provides orientation - no diagnoses or medical treatment.</p>
+                </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notice rk-bg-white rk-mb-4">
+    <div class="rk-container">
+      <div class="rk-row">
+        <div class="rk-col-12">
+          <blockquote class="rk-mt-3 rk-text-danger">IMPORTANT NOTE * This test provides orientation - no diagnoses or medical treatment.</blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer class="rk-pb-0">
+  <div class="rk-container">
+      <div class="rk-row rk-g-4">
+          <div class="rk-col-md-3 rk-col-lg-3 rk-col-sm-3 rk-col-10 rk-m-auto">
+              <div class="ceo-avatar">
+                  <!-- <img src="https://amethyst-jada-29.tiiny.site/footer-img.png" class="rk-img" alt="CEO"> -->
+                  <img src="img/Portfoliowert.png" class="rk-img footer-ceo-img rk-w-75" alt="CEO">
+              </div>
+          </div>
+          <div class="rk-col-md-6 rk-col-lg-6 rk-col-sm-6">
+              <div class="related-questions">
+                      <div class="comment-cloud"><a href="#" class="rk-text-dark rk-text-small">Want to understand why weight and energy fluctuate? <br>
+  Explore the Weight + Detox GENcheckup.</a></div>
+                      <div class="comment-cloud"><a href="#" class="rk-text-dark rk-text-small">Not sure which nutrients your body truly needs? <br>
+  Learn more in the Nutrition + Detox GENcheckup.</a></div>
+                      <div class="comment-cloud"><a href="#" class="rk-text-dark rk-text-small">Want one complete lifestyle analysis instead of separate tests? <br>
+  The Comprehensive Lifestyle DNA Test gives you the full picture.</a></div>
+              </div>
+          </div>
+          <div class="rk-col-md-3 rk-col-lg-3 rk-col-sm-3">
+              <div class="social-links">
+                  <h5 class="rk-mb-3 rk-text-light">Follow us on:</h5>
+                  <a class="rk-d-flex  rk-align-items-center rk-text-light rk-mb-1 rk-fs-sm" href="https://www.facebook.com/carole.holzhauer"><img src="img/facebook.png" class="rk-img rk-me-2" alt="Facebook">Facebook</a>
+                  <a class="rk-d-flex rk-align-items-center rk-text-light rk-mb-1 rk-fs-sm" href="https://www.youtube.com/@CaroleHolzh%C3%A4uer"><img src="img/video.png" class="rk-img rk-me-2" alt="Youtube">Youtube</a>
+                  <a class="rk-d-flex rk-align-items-center rk-text-light rk-mb-1 rk-fs-sm" href="https://www.instagram.com/die_longevity_apothekerin/"><img src="img/instagram.png" class="rk-img rk-me-2" alt="instagram">Instagram</a>
+                  <a class="rk-d-flex rk-align-items-center rk-text-light rk-mb-1 rk-fs-sm" href="https://www.linkedin.com/in/carole-holzh%C3%A4uer/"><img src="img/linkedin.png" class="rk-img rk-me-2" alt="LinkedIn">LinkedIn</a>
+              </div>
+          </div>
+          
+      </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
