@@ -410,6 +410,7 @@
 .rk-justify-content-center { justify-content: center; }
 .rk-justify-content-end { justify-content: flex-end; }
 .rk-justify-content-between { justify-content: space-between; }
+.rk-justify-content-evenly { justify-content: space-evenly; }
 
 .rk-align-items-start { align-items: flex-start; }
 .rk-align-items-center { align-items: center; }
@@ -897,7 +898,7 @@ img {
 .rk-m-4 { margin: var(--rk-space-4) !important; }
 .rk-m-5 { margin: var(--rk-space-5) !important; }
 
-.rk-m-auto { margin: auto !important; }
+.rk-mx-auto { margin: 0 auto !important; }
 
 /* =========================================================
    MARGIN TOP / BOTTOM / LEFT / RIGHT
@@ -1034,7 +1035,7 @@ img {
     background-color: #2563eb;
 }
 .footer-ceo-img{
-  filter: drop-shadow(7px 3px 12px black);
+  filter: drop-shadow(0px -5px 8px black);
 }
 
 
@@ -1059,7 +1060,20 @@ img {
       0 calc(100% - var(--s))/var(--s) var(--s) no-repeat border-box,
     linear-gradient(#000 0 0) padding-box
 }
-
+@media (min-width: 992px){
+  .ceo-avatar::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 323px;
+      background-image: url(https://custome-html.vercel.app/Portfoliowert.png);
+      left: 0;
+      top: -60px;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+}
+    
   </style>
 </head>
 
@@ -1071,7 +1085,7 @@ img {
       <div class="rk-container">
       <div class="rk-row rk-align-items-center">
         <div class="rk-col-12">
-            <div class="rk-logo rk-text-center rk-d-md-flex rk-justify-content-between rk-align-items-center">
+            <div class="rk-logo rk-text-center rk-d-md-flex rk-align-items-center rk-justify-content-evenly">
                 <img src="https://beauty-gencheckup.com/wp-content/uploads/2025/11/PNG-Beauty_GenCheckUp-1.png" class="rk-img rk-logo-pic rk-w-15" style="max-width: 70px;" alt="beauty-gencheckup">
                 <p class="rk-text-light rk-my-1 rk-fw-light rk-fs-5 header-tagline">Beautiful skin begins where skincare ends  in your DNA</p>
             </div>
@@ -1213,10 +1227,9 @@ img {
 <footer class="rk-pb-0">
   <div class="rk-container">
       <div class="rk-row rk-g-4">
-          <div class="rk-col-md-3 rk-col-lg-3 rk-col-sm-3 rk-col-10 rk-m-auto">
-              <div class="ceo-avatar">
-                  <!-- <img src="https://amethyst-jada-29.tiiny.site/footer-img.png" class="rk-img" alt="CEO"> -->
-                  <img src="Portfoliowert.png" class="rk-img footer-ceo-img rk-w-75" alt="CEO">
+          <div class="rk-col-md-6 rk-col-lg-3 rk-col-sm-3 rk-col-10 rk-mx-auto">
+              <div class="ceo-avatar" style="position: relative;">
+                  <!-- <img src="Portfoliowert.png" class="rk-img footer-ceo-img rk-m-auto" alt="CEO"> -->
               </div>
           </div>
           <div class="rk-col-md-6 rk-col-lg-6 rk-col-sm-6">
