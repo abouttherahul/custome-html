@@ -9,16 +9,14 @@
       margin: 0;
       background: #f5f6fa;
     }
-    .box {
+    .tab-box {
+      border: solid 1px #a36c44;
+      min-height: 185px;
       background: #fff;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,.08);
       text-align: center;
-    }
-    .tab-box {
-      border: solid 1px #a36c44;
-      min-height: 185px;
     }
     .tab-box h6{
       color: #a36c44;
@@ -30,12 +28,6 @@
     .rk-mainBody, header, footer, .notice{
       max-width: 992px;
       margin: 0 auto;
-    }
-    aside {
-      background: #1f2937;
-      color: #fff;
-      min-height: 300px;
-      border-radius: 8px;
     }
     /* =========================================================
     ROOT VARIABLES (Bootstrap 5 defaults)
@@ -294,27 +286,6 @@
   .rk-col-xxl-12 { width: 100%; }
 
 }
-
-
-/* =========================================================
-   ROW COLUMNS
-========================================================= */
-.rk-row-cols-1 > * { width: 100%; }
-.rk-row-cols-2 > * { width: 50%; }
-.rk-row-cols-3 > * { width: 33.333333%; }
-.rk-row-cols-4 > * { width: 25%; }
-.rk-row-cols-5 > * { width: 20%; }
-.rk-row-cols-6 > * { width: 16.666667%; }
-
-/* =========================================================
-   OFFSETS
-========================================================= */
-.rk-offset-1 { margin-left: 8.333333%; }
-.rk-offset-2 { margin-left: 16.666667%; }
-.rk-offset-3 { margin-left: 25%; }
-.rk-offset-4 { margin-left: 33.333333%; }
-.rk-offset-5 { margin-left: 41.666667%; }
-.rk-offset-6 { margin-left: 50%; }
 
 /* =========================================================
    GUTTERS
@@ -1076,8 +1047,13 @@ img {
   .footer-ceo-img {
     display: none;
   }
-  
+   .rk-flex-direction-row-reverse {
+    flex-direction: row-reverse;
+  }
 }
+
+
+
     
   </style>
 </head>
@@ -1092,7 +1068,7 @@ img {
         <div class="rk-col-12">
             <div class="rk-logo rk-text-center rk-d-md-flex rk-align-items-center rk-justify-content-evenly">
                 <img src="beautygen-white-logo-mian.png" class="rk-img rk-logo-pic rk-w-15" style="max-width: 70px;" alt="beauty-gencheckup">
-                <p class="rk-text-light rk-my-1 rk-fw-light rk-fs-5 header-tagline">Beautiful skin begins where skincare ends  in your DNA</p>
+                <p class="rk-text-light rk-my-1 rk-fw-light rk-fs-4 header-tagline">Your most powerful skincare isn’t in a jar - it’s in your DNA.</p>
             </div>
         </div>
         </div>
@@ -1115,72 +1091,132 @@ img {
             <input type="radio" name="rk-vtabs" id="rk-vtab-2">
             <input type="radio" name="rk-vtabs" id="rk-vtab-3">
             <input type="radio" name="rk-vtabs" id="rk-vtab-4"> 
-            <input type="radio" name="rk-vtabs" id="rk-vtab-5">
 
             <!-- LEFT TABS -->
             <div class="rk-vtabs-nav">
-                <label class="rk-vtab-label" for="rk-vtab-1">Beauty GENcheckup</label>
-                <label class="rk-vtab-label" for="rk-vtab-2">What this test reveals</label>
-                <label class="rk-vtab-label" for="rk-vtab-3">What is analyzed?</label>
-                <label class="rk-vtab-label" for="rk-vtab-4">What you receive?</label>
-                <label class="rk-vtab-label" for="rk-vtab-5">Who it’s for?</label>
+                <label class="rk-vtab-label" for="rk-vtab-1">What this test reveals</label>
+                <label class="rk-vtab-label" for="rk-vtab-2">What is analyzed?</label>
+                <label class="rk-vtab-label" for="rk-vtab-3">What you receive?</label>
+                <label class="rk-vtab-label" for="rk-vtab-4">Who it’s for?</label>
             </div>
 
             <!-- RIGHT CONTENT -->
             <div class="rk-vtabs-content">
 
                 <div class="rk-vtab-panel" id="rk-vpanel-1">
-                <p>
-                    This GENcheckup shows how your genetics influence the way your skin ages, regenerates, and reacts  helping you choose skincare and routines that truly fit YOU.
-                </p>
+                 <p>Your skin behaves the way it does for a reason and often, the reason lies in your DNA.</p>
+                  <p>The Beauty GENcheckup makes these invisible factors visible, so you finally understand:</p>
+                  
+
+                   <div class="rk-container">
+                    <div class="rk-row rk-align-items-center">
+                      <div class="rk-col-md-6 rk-col-lg-6 rk-col-12">
+                        <img src="collagen.png" class="rk-img rk-mx-auto" alt="">
+                      </div>
+                      <div class="rk-col-md-6 rk-col-lg-6 rk-col-12">
+                        <h5>1. Why your skin ages the way it does</h5>
+                        <p>Your genetics influence collagen formation, firmness, elasticity, and how quickly fine lines appear.     <br>This test uncovers whether your skin:</p>
+                          <ul>
+                            <li>needs more support with collagen synthesis</li>
+                            <li>is prone to early loss of firmness</li>
+                            <li>naturally regenerates slowly or efficiently</li>
+                          </ul>
+                        <p>So you can choose skincare that strengthens not stresses your skin.</p>
+                      </div>
+                    </div>
+                    <div class="rk-row rk-align-items-center rk-flex-direction-row-reverse">
+                      <div class="rk-col-md-6 rk-col-lg-6 rk-col-12">
+                        <img src="skin barrier.png" class="rk-img rk-mx-auto" alt="">
+                      </div>
+                      <div class="rk-col-md-6 rk-col-lg-6 rk-col-12">
+                        <h5>2. Why your skin reacts to stress, products or the environment</h5>
+                        <p>Some people have highly sensitive inflammatory pathways. Others are naturally more resilient. <br>
+                           This test shows:</p>
+                          <ul>
+                            <li>your skin’s inflammatory tendencies</li>
+                            <li>how reactive your skin is</li>
+                            <li>predisposition to redness, irritation, breakouts</li>
+                          </ul>
+                        <p>So you can avoid routines that trigger inflammation and choose calming, supportive care.</p>
+                      </div>
+                      
+                    </div>
+                    <div class="rk-row rk-align-items-center">
+                      <div class="rk-col-md-6 rk-col-lg-6 rk-col-12">
+                        <img src="inflammation.png" class="rk-img rk-mx-auto" alt="">
+                      </div>
+                      <div class="rk-col-md-6 rk-col-lg-6 rk-col-12">
+                        <h5>3. Why moisture balance is an issue</h5>
+                        <p>Hydration is genetic too. <br>You learn:</p>
+                          <ul>
+                            <li>how well your skin holds moisture</li>
+                            <li>how strong your barrier naturally is</li>
+                            <li>risk for dryness or sensitivity</li>
+                          </ul>
+                        <p>This helps you choose the right textures, lipids, and routines.</p>
+                      </div>
+                    </div>
+                    <div class="rk-row rk-align-items-center rk-flex-direction-row-reverse">
+                      <div class="rk-col-md-6 rk-col-lg-6 rk-col-12">
+                        <img src="dna.png" class="rk-img rk-mx-auto" alt="">
+                      </div>
+                      <div class="rk-col-md-6 rk-col-lg-6 rk-col-12">
+                        <h5>4. Why certain foods or nutrients show up in your skin</h5>
+                        <p>Your micronutrient needs are unique. <br>
+                           You discover:</p>
+                          <ul>
+                            <li>Vitamin & mineral needs relevant for skin</li>
+                            <li>Antioxidant capacity</li>
+                            <li>Omega-3 utilization</li>
+                            <li>Detox enzyme activity impacting clarity & glow</li>
+                          </ul>
+                        <p>This is the foundation of “beauty from within” personalized.</p>
+                      </div>
+                    </div>
+                  </div>
+                  
                 </div>
+
                 <div class="rk-vtab-panel" id="rk-vpanel-2">
-                  <p>DNA-based insights for firmer, calmer, more resilient skin.</p>
-                  <p>Your skin is unique - your skincare should be too.</p>
-                  <p>This test shows how your genetics influence aging, sensitivity, moisture balance & regeneration.</p>
-                  <p>No diagnoses  just clear orientation for smarter skincare and “beauty from within.”</p>
-                </div>
-                <div class="rk-vtab-panel" id="rk-vpanel-3">
-                    
-                    <div class="rk-container rk-gx-0">
+                  <div class="rk-container rk-gx-0">
                         <div class="rk-row rk-g-4 rk-justify-content-between">
                             <div class="rk-col-md-6 rk-col-lg-4 rk-col-sm-6 rk-col-12">
-                                <div class="box tab-box">
+                                <div class="tab-box">
                                     <img src="Skin Structure & Collagen.png" class="rk-img rk-w-25 rk-mb-2 rk-mx-auto" alt="">
                                     <h6>Skin Structure & Collagen</h6>
                                     <p>How your genes influence firmness, elasticity, and aging.</p>
                                 </div>
                             </div>
                             <div class="rk-col-md-6 rk-col-lg-4 rk-col-sm-6 rk-col-12">
-                                <div class="box tab-box">
+                                <div class="tab-box">
                                     <img src="Antioxidant & Environmental Stress.png" class="rk-img rk-w-25 rk-mb-2 rk-mx-auto" alt="">
                                     <h6>Antioxidant & Environmental Stress</h6>
                                     <p>Your skin’s ability to handle oxidative stress, UV & pollution.</p>
                                 </div>
                             </div>
                             <div class="rk-col-md-6 rk-col-lg-4 rk-col-sm-6 rk-col-12">
-                                <div class="box tab-box">
+                                <div class="tab-box">
                                     <img src="Inflammation & Sensitivity.png" class="rk-img rk-w-25 rk-mb-2 rk-mx-auto" alt="">
                                     <h6>Inflammation & Sensitivity</h6>
                                     <p>Tendencies for redness, irritation, and reactive skin.</p>
                                 </div>
                             </div>
                             <div class="rk-col-md-6 rk-col-lg-4 rk-col-sm-6 rk-col-12">
-                                <div class="box tab-box">
+                                <div class="tab-box">
                                     <img src="Moisture Balance & Barrier.png" class="rk-img rk-w-25 rk-mb-2 rk-mx-auto" alt="">
                                     <h6>Moisture Balance & Barrier</h6>
                                     <p>Hydration capacity and skin barrier strength.</p>
                                 </div>
                             </div>
                             <div class="rk-col-md-6 rk-col-lg-4 rk-col-sm-6 rk-col-12">
-                                <div class="box tab-box">
+                                <div class="tab-box">
                                     <img src="regeneration & repair.png" class="rk-img rk-w-25 rk-mb-2 rk-mx-auto" alt="">
                                     <h6>Regeneration & Repair</h6>
                                     <p>How quickly your skin renews & recovers at night.</p>
                                 </div>
                             </div>
                             <div class="rk-col-md-6 rk-col-lg-4 rk-col-sm-6 rk-col-12">
-                                <div class="box tab-box">
+                                <div class="tab-box">
                                     <img src="micro nutrition needs.png" class="rk-img rk-w-25 rk-mb-2 rk-mx-auto" alt="">
                                     <h6>Micronutrient Needs</h6>
                                     <p>Genetic need for vitamins, minerals & antioxidants that support glowing skin.</p>
@@ -1189,29 +1225,97 @@ img {
                         </div>
                     </div>
                 </div>
+
+                <div class="rk-vtab-panel" id="rk-vpanel-3"> 
+                  <p>When you choose the Beauty GENcheckup, you receive more than DNA results you receive a <b>guided, expert-led skin optimization system.</b></p>
+                  
+                  <div class="rk-container">
+                    <div class="rk-row rk-align-items-center">
+                      <div class="rk-col-md-6 rk-col-lg-6 rk-col-12">
+                        <img src="kit+ swab.png" class="rk-img rk-mx-auto" alt="">
+                      </div>
+                      <div class="rk-col-md-6 rk-col-lg-6 rk-col-12">
+                        <h5>1. A clear, beautifully structured results book</h5>
+                          <ul>
+                            <li>Over 30 pages of personalized insights</li>
+                            <li>Visually explained, easy to understand</li>
+                            <li>Tailored recommendations for skincare, nutrients & routines</li>
+                            <li>A premium format you can refer to anytime</li>
+                          </ul>
+                      </div>
+                    </div>
+                    <div class="rk-row rk-align-items-center">
+                      <div class="rk-col-md-6 rk-col-lg-6 rk-col-12">
+                        <img src="instruction guide.png" class="rk-img rk-mx-auto" alt="">
+                      </div>
+                      <div class="rk-col-md-6 rk-col-lg-6 rk-col-12">
+                        <h5>2. A personalized DNA skin profile</h5>
+                        <p>Your unique blueprint covering:</p>
+                          <ul>
+                            <li>Firmness</li>
+                            <li>Sensitivity</li>
+                            <li>Regeneration</li>
+                            <li>Moisture</li>
+                            <li>Antioxidant needs</li>
+                            <li>Micronutrient tendencies</li>
+                          </ul>
+                        <p>This profile becomes your long-term guide for smarter decisions.</p>
+                      </div>
+                    </div>
+                    <div class="rk-row rk-align-items-center">
+                      <div class="rk-col-md-6 rk-col-lg-6 rk-col-12">
+                        <img src="sample book page.png" class="rk-img rk-mx-auto" alt="">
+                      </div>
+                      <div class="rk-col-md-6 rk-col-lg-6 rk-col-12">
+                        <h5>3. Expert interpretation by Carole Holzheuer</h5>
+                          <ul>
+                            <li>Over 30 years of pharmaceutical expertise</li>
+                            <li>Deep experience in prevention & personalized health</li>
+                            <li>Interpretation that goes far beyond raw genetic data</li>
+                          </ul>
+                        <p>A level of support most DNA tests simply do not offer.</p>
+                      </div>
+                    </div>
+                    <div class="rk-row rk-align-items-center">
+                      <div class="rk-col-md-6 rk-col-lg-6 rk-col-12">
+                        <img src="carole.png" class="rk-img rk-mx-auto" alt="">
+                      </div>
+                      <div class="rk-col-md-6 rk-col-lg-6 rk-col-12">
+                        <h5>This test is ideal for:</h5>
+                          <ul>
+                            <li>Clear step-by-step instruction</li>
+                            <li>Non-invasive</li>
+                            <li>Ready in minutes</li>
+                          </ul>
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div>
                 
                 <div class="rk-vtab-panel" id="rk-vpanel-4">
-                <p>When you choose the Beauty GENcheckup, you receive more than a test result. You receive a guided, expert-led system: Visually guided sample instructions Simple, clear, and easy to follow</p>
-
-                <p>1. A comprehensive, well-structured results book.
-                    Clearly explained and designed for real understanding</p>
-
-                <p>2. An expert-recommended DNA profile Structured for practical application — not raw data</p>
-
-                <p>3.  Interpretation guided by over 30 years of professional experience Developed and supervised by Carole Holzheuer, German pharmacist and expert in preventive and personalized health</p>
+                  <div class="rk-container">
+                    <div class="rk-row rk-align-items-center">
+                      <div class="rk-col-md-6 rk-col-lg-6 rk-col-12">
+                        <img src="1-(2).png" class="rk-img rk-mx-auto" alt="">
+                      </div>
+                      <div class="rk-col-md-6 rk-col-lg-6 rk-col-12">
+                        <h5>This test is ideal for:</h5>
+                          <h6>People who want to stop guessing their skincare</h6>
+                          <p>If you’ve tried many routines but still struggle — this gives clarity.</p>
+                          <h6>People with sensitive, reactive, or easily irritated skin</h6>
+                          <p>Understand what triggers it and what your skin truly needs.</p>
+                          <h6>People who care about aging prevention</h6>
+                          <p>Know which strategies your DNA actually responds to.</p>
+                          <h6>People who want “beauty from within”</h6>
+                          <p>Because nutrients & skin biology are deeply connected.</p>
+                          <h6>Beauty, skin & wellness professionals</h6>
+                          <p>A unique, science-based tool for personalized care.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="rk-vtab-panel" id="rk-vpanel-5">
-                <ul>
-                <li>Anyone who wants to understand their skin better <br></li>
-                <li>People looking for personalized skincare instead of trial and error<br></li>
-                <li>Those interested in “beauty from within”<br></li>
-                <li>Professionals in beauty, skincare, and wellness
-
-                </ul>    
-                </div>
-                <div class="rk-vtab-panel" id="rk-vpanel-6">
-                <p>This test provides orientation - no diagnoses or medical treatment.</p>
-                </div>            
+                        
             </div>
           </div>
         </div>
